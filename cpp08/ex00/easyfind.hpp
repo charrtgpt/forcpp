@@ -1,7 +1,7 @@
 #ifndef EASYFIND_HPP
 #define EASYFIND_HPP
 
-#include <algorith>
+#include <algorithm>
 #include <stdexcept>
 
 template <typename T>
@@ -11,7 +11,7 @@ typename T::iterator easyfind(T &container, int value)
 
     it = std::find(container.begin(), container.end(), value);
     if (it ==container.end())
-        trow std::runtime_error("Value not found");
+        throw std::runtime_error("Value not found");
 
     return it;
 }
