@@ -22,6 +22,7 @@ int main()
         std::cout << "Found: " << *it << std::endl;
         std::cout << it - numbers.begin() << std::endl;
         std::cout << "Position: " << it - numbers.begin() << std::endl;
+        std::cout << numbers[2] << '\n';
     }
     catch (const std::exception &e)
     {
@@ -48,6 +49,8 @@ int main()
     {
         std::list<int>::iterator it = easyfind(values, 15);
         std::cout << "Found: " << *it << std::endl;
+        it++;
+        std::cout << *it << std::endl;
     }
     catch (const std::exception &e)
     {
