@@ -18,8 +18,9 @@ int main()
 
     try
     {
-        std::vector<int>::iterator it = easyfind(numbers, 20);
+        std::vector<int>::iterator it = easyfind(numbers, 10);
         std::cout << "Found: " << *it << std::endl;
+        std::cout << it - numbers.begin() << std::endl;
         std::cout << "Position: " << it - numbers.begin() << std::endl;
     }
     catch (const std::exception &e)
@@ -29,15 +30,14 @@ int main()
 
     try
     {
-        easyfind(numbers, 99);
+        easyfind(numbers, 89);
     }
     catch (const std::exception &e)
     {
         std::cout << "Error: " << e.what() << std::endl;
     }
 
-    std::cout << "\n--- List tests ---" << std::endl;
-
+    std::cout << "\n-- List tests ---" << std::endl;
     std::list<int> values;
 
     values.push_back(5);
