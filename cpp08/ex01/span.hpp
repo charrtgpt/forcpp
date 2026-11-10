@@ -8,8 +8,8 @@
 class Span
 {
 private:
-    std::vector<int> _numbers;
-    unsigned int _maxSize;
+    std::vector<int> numbers;
+    unsigned int maxSize;
 
 public:
     Span(unsigned int n);
@@ -21,6 +21,19 @@ public:
 
     unsigned int shortestSpan() const;
     unsigned int longestSpan() const;
+
+    template <typename Iterator>
+    void addRange(Iterator first, Iterator last);
 };
+
+template <typename Iterator>
+void Span::addRange(Iterator first, Iterator last)
+{
+    while (first != last)
+    {
+        addNumber(*first);
+        ++first;
+    }
+}
 
 #endif
