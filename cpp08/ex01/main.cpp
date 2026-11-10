@@ -31,5 +31,17 @@ int main()
     std::cout << "Shortest span: " << p.shortestSpan() << std::endl;
     std::cout << "Longest span: " << p.longestSpan() << std::endl;
 
+    Span big(10000);
+    std::vector<int> bigNumbers;
+
+    for (int i = 0; i < 10000; i++)
+        bigNumbers.push_back(i * 2);
+
+    big.addRange(bigNumbers.begin(), bigNumbers.end());
+
+    std::cout << "\nTest 3:" << std::endl;
+    std::cout << "Shortest: " << big.shortestSpan() << '\n';
+    std::cout << "Longest: " << big.longestSpan() << '\n';
+
     return 0;
 }
